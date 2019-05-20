@@ -1,0 +1,83 @@
+h1, a {
+    text-decoration: none !important;
+    color: #C25100;
+}
+
+p {
+    color: white;
+}
+
+small {
+    font-size: 14px;
+}
+
+.wrap {
+    /*max-width: 1250px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);*/
+    background: #fff;
+
+}
+
+.footer {
+    background: #262626;
+}
+
+.sidebar {
+    /*
+    background: #262626;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100%;
+    */
+}
+
+.content {
+    width: 300px;
+    height: 300px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /*background: #262626;*/
+    background: black;
+
+}
+
+
+
+@font-face{
+    font-family: 'neuro-font';
+    src: url('../fonts/neurochrome.ttf')
+}
+
+.neuroFont {
+    font-family: 'neuro-font';
+    font-size: 24px;
+    color: #ffffff;
+    transition: 0.1s;
+}
+
+.neuroFont:hover {
+    font-family: 'neuro-font';
+    font-size: 32px;
+    color: yellow;
+}
+
+iframe{
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+}
+
+.container {
+    position: absolute;
+    max-width: 100%;
+    min-height: 100%;
+    
+    background: rgba(0,0,0,0.4);
+}
+
