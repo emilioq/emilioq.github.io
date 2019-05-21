@@ -1,7 +1,7 @@
 var friction = 2.0;
 
 class Particle {
-    constructor(pos, vel, f, rgb, att, rep, pas, minR, maxR, damp, size) {
+    constructor(pos, vel, f, rgb, att, rep, pas, minR, maxR, damp, size, fMap) {
         this.position = pos;
         this.velocity = vel;
         this.acceleration = createVector();
@@ -19,6 +19,8 @@ class Particle {
 
         this.damp = damp;
         this.size = size;
+
+        this.forceMap = fMap;
     }
 
     update() {
@@ -100,6 +102,7 @@ class Particle {
                     total++;
                 }
 
+                newVel.mult(this.forceMap[p.value -1]);
                 totVel.add(newVel);
             }
         }

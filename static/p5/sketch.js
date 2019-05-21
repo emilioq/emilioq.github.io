@@ -4,7 +4,7 @@ var friction = .80;
 // pos, vel, f, rgb, att, rep, minR, maxR, damp
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  createCanvas(windowWidth, windowHeight);
 
 
   //RED PARTICLES
@@ -20,7 +20,8 @@ function setup() {
       25,                                 //minimum radius
       70,                     //maximum radius
       friction,                                //dampening or friction
-      12                                  //size
+      12,                                  //size
+      [random(1,5),random(1,5),random(1,5),random(1,5),random(1,5)]
       ));
   }
 
@@ -37,7 +38,8 @@ function setup() {
       25,                                 //minimum radius
       57,                                //maximum radius
       friction,                                 //dampening or friction
-      12                                  //size
+      12,                                  //size
+      [random(1,5),random(1,5),random(1,5),random(1,5),random(1,5)]
       ));
   }
 
@@ -47,7 +49,7 @@ function setup() {
     universe.push(new Particle(
       createVector(random(0, width - 50), random(0, height - 50)), //position
       createVector(0, 0),                 //velocity
-      0.5,//7,                                  //force
+      0.02,//7,                                  //force 0.5
       2,                                  //colors
       [3],                                //attracted to
       [1,4,5],                              //repelled to
@@ -55,7 +57,8 @@ function setup() {
       25,                                 //minimum radius
       70,                                 //maximum radius
       friction,                                //dampening or friction
-      12                                  //size
+      12,                                  //size
+      [random(1,5),random(1,5),random(1,5),random(1,5),random(1,5)]
       ));
   }
 
@@ -72,7 +75,8 @@ function setup() {
       25,                                 //minimum radius
       85,                                 //maximum radius
       friction,                                //dampening or friction
-      12                                  //size
+      12,                                  //size
+      [random(1,5),random(1,5),random(1,5),random(1,5),random(1,5)]
       ));
   }
 
@@ -81,7 +85,7 @@ function setup() {
     universe.push(new Particle(
       createVector(random(width/3, width - 200), random(height/3, height - 200)), //position
       createVector(0, 0),                 //velocity
-      0.6,//7,                                  //force
+      0.1,//7,                                  //force 0.6
       5,                                  //colors
       [3],                                //attracted to
       [1,2,4],                              //repelled to
@@ -89,7 +93,8 @@ function setup() {
       25,                                 //minimum radius
       90,                                 //maximum radius
       friction,                                //dampening or friction
-      12                                  //size
+      12,                                  //size
+      [random(1,5),random(1,5),random(1,5),random(1,5),random(1,5)]
       ));
   }
   
@@ -106,4 +111,26 @@ function draw() {
 
   }
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+
+
+/*
+function mouseDragged() {
+  for(let p of universe) {
+    let dM = dist(p.position.x, p.position.y, mouseX, mouseY);
+    let mid = ((p.maxR - p.minR)/2);
+    let positionM = createVector(mouseX, mouseY);
+    let newVelM = createVector();
+    newVelM.mult(0);
+    newVelM.add(positionM);
+    newVelM.sub(p.position);
+    newVelM.mult(((0.1 / mid) * dM) * -1);
+    p.acceleration += newVelM;
+  }
+}
+*/
 
