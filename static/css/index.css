@@ -62,8 +62,9 @@ small {
 
 .neuroFont:hover {
     font-family: 'neuro-font';
-    font-size: 42px;
+    font-size: 26px;
     color: yellow;
+    background: rgba(0,0,0,0.4);
 }
 
 iframe{
@@ -151,6 +152,37 @@ iframe{
       opacity: 0;
       -webkit-transform: translate3d(7%, 0, 0);
       transform: translate3d(7%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInTop {
+    -webkit-animation: fadeInTop 2s;
+    animation: fadeInTop 2s;
+}
+@-webkit-keyframes fadeInTop {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInTop {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
     }
   
     to {
