@@ -79,6 +79,13 @@ iframe{
     background: rgba(0,0,0,0.6);
 }
 
+.transparent {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0,0,0,1);
+}
+
 .fade-in {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -87,6 +94,20 @@ iframe{
     animation: fadein 2s;
 }
 
+.fade-in-delay{
+    opacity: 0;
+    -webkit-animation: fadein 5s 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 5s 3s; /* Firefox < 16 */
+    -ms-animation: fadein 5s 3s; /* Internet Explorer */
+    -o-animation: fadein 5s 3s; /* Opera < 12.1 */
+    animation: fadein 5s 3s;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -107,3 +128,35 @@ iframe{
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+.fadeInRight {
+    -webkit-animation: fadeInRight 2s;
+    animation: fadeInRight 2s;
+}
+@-webkit-keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(7%, 0, 0);
+      transform: translate3d(7%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(7%, 0, 0);
+      transform: translate3d(7%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
