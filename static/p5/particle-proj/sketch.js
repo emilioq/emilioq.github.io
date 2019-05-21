@@ -1,5 +1,5 @@
 const universe = [];
-var friction = .80; //.80
+var friction = .85; //.80
 
 // pos, vel, f, rgb, att, rep, minR, maxR, damp
 
@@ -8,7 +8,7 @@ function setup() {
 
 
   //RED PARTICLES
-  for(let i = 0; i < random(25, 170); i++) {
+  for(let i = 0; i < 170; i++) {
     universe.push(new Particle(
       createVector(random(0, width - 50), random(0, height - 50)), //position
       createVector(0, 0),                 //velocity
@@ -19,14 +19,14 @@ function setup() {
       [],                                   //passive to
       25,                                 //minimum radius 25
       65,                     //maximum radius 65
-      random(),                                //dampening or friction
+      random(0.2,0.95),                                //dampening or friction
       12,                                  //size
-      [0.9, 0, 1.5, 3, 0]
+      [0.9, 0, 2, 2]
       ));
   }
 
   //BLUE PARTICLES
-  for(let i = 0; i < random(50,200); i++) {
+  for(let i = 0; i < 200; i++) {
     universe.push(new Particle(
       createVector(random(width/4, width * (3/4)), random(height/4, height * (3/4))), //position
       createVector(0, 0),                 //velocity
@@ -36,28 +36,28 @@ function setup() {
       [4],                                 //repelled to 245
       [],                                   //passive to
       25,                                 //minimum radius
-      50,                                //maximum radius 50
-      random(),                                 //dampening or friction
+      55,                                //maximum radius 50
+      random(0.2,0.95),                                 //dampening or friction
       12,                                  //size
-      [1.7, 0, 1.3 , random(5,9) ,0]
+      [1.9, 0, 1, 7]
       ));
   }
 
   //YELLOW PARTICLES
-  for(let i = 0; i < random(5,55); i++) {
+  for(let i = 0; i < 33; i++) {
     universe.push(new Particle(
       createVector(random(width/3, width - 200), random(height/3, height - 200)), //position
       createVector(0, 0),                 //velocity
-      0.002,//7,                                  //force
+      0.2,//7,                                  //force
       4,                                  //colors 4
       [1],                                //attracted to 215
       [3,4],                              //repelled to 34
       [],                                   //passive to
       25,                                 //minimum radius
       77,                                 //maximum radius 77
-      random(),                                //dampening or friction
+      random(0.2,0.95),                                //dampening or friction
       12,                                  //size
-      [0.9, 0, 0.9, 0.9, 0]
+      [0.75, 0, 0.9, 1.2]
       ));
   }
 
