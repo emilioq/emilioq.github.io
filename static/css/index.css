@@ -38,7 +38,7 @@ small {
 .content {
     width: 300px;
     height: 300px;
-    position:absolute;
+    position:relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -46,25 +46,29 @@ small {
 
 }
 
-
-
-@font-face{
-    font-family: 'neuro-font';
-    src: url('../fonts/neurochrome.ttf')
+.center-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.neuroFont {
-    font-family: 'neuro-font';
+.nunitoFont {
+    font-family: 'Nunito', sans-serif;
     font-size: 24px;
     color: #ffffff;
     transition: 0.1s;
 }
 
-.neuroFont:hover {
-    font-family: 'neuro-font';
-    font-size: 26px;
+.nunitoFont:hover {
+    font-family: 'Nunito', sans-serif;
+    font-size: 28px;
     color: yellow;
     background: rgba(0,0,0,0.4);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.63);
+}
+
+.questFont {
+    font-family: 'Questrial', sans-serif;
 }
 
 iframe{
@@ -81,10 +85,13 @@ iframe{
 }
 
 .transparent {
+    z-index:-1;
     position: absolute;
     width: 300px;
     height: 300px;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2);
+
 }
 
 .fade-in {
@@ -97,11 +104,11 @@ iframe{
 
 .fade-in-delay{
     opacity: 0;
-    -webkit-animation: fadein 5s 3s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 5s 3s; /* Firefox < 16 */
-    -ms-animation: fadein 5s 3s; /* Internet Explorer */
-    -o-animation: fadein 5s 3s; /* Opera < 12.1 */
-    animation: fadein 5s 3s;
+    -webkit-animation: fadein 1s 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s 1s; /* Internet Explorer */
+    -o-animation: fadein 1s 1s; /* Opera < 12.1 */
+    animation: fadein 1s 1s;
 
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;

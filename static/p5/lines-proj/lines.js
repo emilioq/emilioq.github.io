@@ -11,7 +11,7 @@ function setup() {
 function draw() {
   clear();
   stroke(250,230,200);
-  strokeWeight(5);
+  strokeWeight(3);
   
   translate(windowWidth/2, windowHeight/2);
 
@@ -20,7 +20,7 @@ function draw() {
   }
 
   if(mouse > 0) {
-    mouse -= 1;
+    mouse -= 3;
   }
 
 
@@ -28,10 +28,10 @@ function draw() {
   if(mouseX > 45 && mouseX < 255 && mouseY > 45 && mouseY < 255) {
     op+=25;
     mouse+=5;
-    t-=.20;
+    t-=.04;
   
-    if(op >= 125) {
-      op = 125;
+    if(op >= 100) {
+      op = 100;
     }
   
     if(mouse >= 125) {
@@ -77,7 +77,7 @@ function draw() {
     line(x2(t-i) + mouse, x1(t-i) + mouseX, y1(t-i) + mouseY, y2(t+i)  + mouse);
   }
   
-  t += .25;
+  t += 0.05; //.25
 }
 
 /*
