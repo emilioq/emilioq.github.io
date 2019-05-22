@@ -151,8 +151,8 @@ class Particle {
         }
 
         noFill();
-        strokeWeight(2);
-        ellipse(this.position.x, this.position.y, 12, 12);
+        strokeWeight(1);
+        ellipse(this.position.x, this.position.y, 8, 8);
 
         //point(this.position.x, this.position.y);
 
