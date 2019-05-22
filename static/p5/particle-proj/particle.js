@@ -119,11 +119,7 @@ class Particle {
         return totVel;
 
     }
-
-        
-
-
-
+    
     applyForce(particles) {
         this.acceleration = this.calcForce(particles);
     }
@@ -137,13 +133,14 @@ class Particle {
                 stroke(150, 70, 70);    //RED
                 break;
             case 2:
-                stroke(70, 150, 70);    //GREEN
+                stroke(70, 70, 150);    //BLUE
+                
                 break;
             case 3:
-                stroke(70, 70, 150);    //BLUE
+                stroke(175, 150, 0);    //YELLOW
                 break;
             case 4:
-                stroke(175, 150, 0);    //YELLOW
+                stroke(70, 150, 70);    //GREEN
                 break;
             case 5:
                 stroke(229, 188, 229);  //PINK
@@ -152,7 +149,12 @@ class Particle {
                 stroke(255, 0, 0);
                 break;
         }
-        point(this.position.x, this.position.y);
+
+        noFill();
+        strokeWeight(2);
+        ellipse(this.position.x, this.position.y, 12, 12);
+
+        //point(this.position.x, this.position.y);
 
          
          /*
