@@ -104,11 +104,11 @@ iframe{
 
 .fade-in-delay{
     opacity: 0;
-    -webkit-animation: fadein 1s 1s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 1s 1s; /* Firefox < 16 */
-    -ms-animation: fadein 1s 1s; /* Internet Explorer */
-    -o-animation: fadein 1s 1s; /* Opera < 12.1 */
-    animation: fadein 1s 1s;
+    -webkit-animation: fadein 5s 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 5s 2s; /* Firefox < 16 */
+    -ms-animation: fadein 5s 2s; /* Internet Explorer */
+    -o-animation: fadein 5s 2s; /* Opera < 12.1 */
+    animation: fadein 5s 2s;
 
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;

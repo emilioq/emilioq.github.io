@@ -1,6 +1,6 @@
 var num_lines = 15;
 var t = 0;
-var op = 55;
+var op = 15; //55
 var mouse = 0;
 
 function setup() {
@@ -15,23 +15,21 @@ function draw() {
   
   translate(windowWidth/2, windowHeight/2);
 
-  if(op > 55) {
+  if(op > 15) {
     op -= 5;
   }
 
   if(mouse > 0) {
-    mouse -= 3;
+    mouse -= 2;
   }
-
-
-
+  
   if(mouseX > 45 && mouseX < 255 && mouseY > 45 && mouseY < 255) {
-    op+=25;
-    mouse+=5;
+    op+=10;
+    mouse=8;
     t-=.04;
   
-    if(op >= 100) {
-      op = 100;
+    if(op >= 25) {
+      op = 25;
     }
   
     if(mouse >= 125) {
@@ -39,7 +37,6 @@ function draw() {
     }
   }
 
-  console.log(mouseX, mouseY);
   
   for(let i = 0; i < num_lines; i++) {
     /*
