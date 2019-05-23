@@ -79,7 +79,7 @@ small {
 }
 
 
-
+/*
 #sidebar {
     margin-right: -250px;
     width: 250px; 
@@ -89,11 +89,29 @@ small {
     height: 100%;
     z-index: 999;
     color:  #fff;
-    /*background: darkcyan;*/
+    background: rgb(0, 0, 0);
     transition: 0.3s;
 }
 #sidebar.active {
     margin-right: 0px;
+}
+*/
+
+
+
+#sidebar {
+    margin-top: 40%;
+    width: 100%; 
+    position: fixed;
+    top: 40%;
+    height: 100%;
+    z-index: 999;
+    color:  #fff;
+    background: rgba(0, 139, 139, 0.377);
+    transition: 0.3s;
+}
+#sidebar.active {
+    margin-top: 0px;
 }
 
 
@@ -102,11 +120,14 @@ small {
     max-width: 100%;
     min-height: 100%;
     background: rgba(0,0,0,0.6);
-    transition: all 0.75s;
+    transition: all 0.3s;
 }
 #content.active {
-    max-width: calc(100% - 250px);
+    /*max-width: calc(100% - 250px);*/
+    min-height: 40%;
 }
+
+
 
 .center {
     display: flex;
