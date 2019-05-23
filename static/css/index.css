@@ -107,8 +107,8 @@ small {
     height: 100%;
     z-index: 999;
     color:  #fff;
-    background: rgba(0, 139, 139, 0.377);
-    transition: 0.3s;
+    background: rgba(0, 139, 139, 0.3);
+    transition: all 0.3s;
 }
 #sidebar.active {
     margin-top: 0px;
