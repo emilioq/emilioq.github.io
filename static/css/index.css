@@ -101,9 +101,9 @@ small {
 
 #sidebar {
     margin-top: 100vh;
-    width: 100vw;
-    height: 60vh; 
-    top: 40vh;
+    width: 100%;
+    height: 60%; 
+    top: 40%;
     bottom: 0;
 
     position: fixed;
@@ -119,15 +119,15 @@ small {
 
 #content {
     position: absolute;
-    max-width: 100vw;
-    min-height: 100vh;
+    max-width: 100%;
+    min-height: 100%;
     background: rgba(0,0,0,0.6);
     transition: all 0.3s;
 }
 #content.active {
     /*max-width: calc(100% - 250px);*/
-    min-height: 40vh;
-    max-height: 40vh;
+    min-height: 40%;
+    max-height: 40%;
 }
 
 
