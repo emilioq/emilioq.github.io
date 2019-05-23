@@ -10,11 +10,11 @@ small {
     font-size: 14px;
 }
 
-
 .footer {
     background: #262626;
 }
 
+/*
 .content {
     width: 300px;
     height: 300px;
@@ -23,6 +23,7 @@ small {
     top: 50%;
     transform: translate(-50%,-50%);
 }
+*/
 
 .nunitoFont {
     font-family: 'Nunito', sans-serif;
@@ -39,10 +40,9 @@ small {
 }
 
 .nunitoFontLink:hover {
-    
-    font-family: 'Nunito', sans-serif;
     font-size: 72px;
     color: darkcyan;
+    cursor: pointer;
     /*background: rgba(0,0,0,0.4);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.63);*/
     
@@ -57,26 +57,49 @@ small {
     font-family: 'Questrial', sans-serif;
 }
 
-iframe{
+
+
+#sideBarCollapse.active {
+    font-size: 72px;
+    color: darkcyan;
+}
+
+#particles{
     width: 100%; 
     height: 100%;
     position: absolute;
+    transition: all 0.3s;
+}
+#particles.active {
+    width: calc(100% - 250px);
 }
 
-.container {
+
+#sidebar {
+    width: 0px;
+    margin-left: -250px;
+    transition: all 0.3s;
+}
+#sidebar.active {
+    width: 250px; 
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: darkcyan;
+    color:  #fff;
+}
+
+#content {
     position: absolute;
     max-width: 100%;
     min-height: 100%;
     background: rgba(0,0,0,0.6);
+    transition: all 0.3s;
 }
-
-.transparent {
-    z-index:-1;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: rgba(0, 0, 0, 0.85);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2);
+#content.active {
+    max-width: calc(100% - 250px);
 }
 
 .center {
@@ -87,281 +110,18 @@ iframe{
 }
 
 
-
-
-
-/* animations */
-
-
-
-
-.fade-in {
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-    animation: fadein 2s;
-}
-.fade-in-delay{
-    opacity: 0;
-    -webkit-animation: fadein 5s 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 5s 2s; /* Firefox < 16 */
-    -ms-animation: fadein 5s 2s; /* Internet Explorer */
-    -o-animation: fadein 5s 2s; /* Opera < 12.1 */
-    animation: fadein 5s 2s;
-
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-fill-mode: forwards;
-    -ms-animation-fill-mode: forwards;
-    -o-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+.wrapper {
+    display: flex;
+    width: 70%;
 }
 
-
-
-
-.fadeInRight {
-    -webkit-animation: fadeInRight 2s;
-    animation: fadeInRight 2s;
-}
-@-webkit-keyframes fadeInRight {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(7%, 0, 0);
-      transform: translate3d(7%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-}
-@keyframes fadeInRight {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(7%, 0, 0);
-      transform: translate3d(7%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-}
-
-
-
-.fadeInTop {
-    -webkit-animation: fadeInTop 2s;
-    animation: fadeInTop 2s;
-}
-@-webkit-keyframes fadeInTop {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -10%, 0);
-      transform: translate3d(0, -10%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-}
-@keyframes fadeInTop {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -10%, 0);
-      transform: translate3d(0, -10%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-}
-
-.bounceIn {
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
-    -webkit-animation-name: bounceIn;
-    animation-name: bounceIn;
-}
-.bounceInDelay {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-name: bounceIn;
-    animation-name: bounceIn;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    opacity:0;
-}
-
-@keyframes bounceIn {
-    from,
-    20%,
-    40%,
-    60%,
-    80%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: scale3d(0.3, 0.3, 0.3);
-        transform: scale3d(0.3, 0.3, 0.3);
-    }
-
-    20% {
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    40% {
-        -webkit-transform: scale3d(0.9, 0.9, 0.9);
-        transform: scale3d(0.9, 0.9, 0.9);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: scale3d(1.03, 1.03, 1.03);
-        transform: scale3d(1.03, 1.03, 1.03);
-    }
-
-    80% {
-        -webkit-transform: scale3d(0.97, 0.97, 0.97);
-        transform: scale3d(0.97, 0.97, 0.97);
-    }
-
-    to {
-        opacity: 1;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-
-
-
-.jello {
-    -webkit-animation-name: jello;
-    animation-name: jello;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    animation-duration: 0.75s;
-}
-@-webkit-keyframes jello {
-    from,
-    11.1%,
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    22.2% {
-        -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
-        transform: skewX(-12.5deg) skewY(-12.5deg);
-    }
-
-    33.3% {
-        -webkit-transform: skewX(6.25deg) skewY(6.25deg);
-        transform: skewX(6.25deg) skewY(6.25deg);
-    }
-
-    44.4% {
-        -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
-        transform: skewX(-3.125deg) skewY(-3.125deg);
-    }
-
-    55.5% {
-        -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
-        transform: skewX(1.5625deg) skewY(1.5625deg);
-    }
-
-    66.6% {
-        -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
-        transform: skewX(-0.78125deg) skewY(-0.78125deg);
-    }
-
-    77.7% {
-        -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
-        transform: skewX(0.390625deg) skewY(0.390625deg);
-    }
-
-    88.8% {
-        -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
-        transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
-    }
-}
-@keyframes jello {
-    from,
-    11.1%,
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    22.2% {
-        -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
-        transform: skewX(-12.5deg) skewY(-12.5deg);
-    }
-
-    33.3% {
-        -webkit-transform: skewX(6.25deg) skewY(6.25deg);
-        transform: skewX(6.25deg) skewY(6.25deg);
-    }
-
-    44.4% {
-        -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
-        transform: skewX(-3.125deg) skewY(-3.125deg);
-    }
-
-    55.5% {
-        -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
-        transform: skewX(1.5625deg) skewY(1.5625deg);
-    }
-
-    66.6% {
-        -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
-        transform: skewX(-0.78125deg) skewY(-0.78125deg);
-    }
-
-    77.7% {
-        -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
-        transform: skewX(0.390625deg) skewY(0.390625deg);
-    }
-
-    88.8% {
-        -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
-        transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
-    }
+.transparent {
+    z-index:-1;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2);
 }
   
   
