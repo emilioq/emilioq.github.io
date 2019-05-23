@@ -57,6 +57,10 @@ small {
     font-family: 'Questrial', sans-serif;
 }
 
+.questFont:hover {
+    color:yellow;
+}
+
 
 
 #sideBarCollapse.active {
@@ -75,28 +79,30 @@ small {
 }
 
 
+
 #sidebar {
-    width: 0px;
-    margin-left: -250px;
-    transition: all 0.3s;
-}
-#sidebar.active {
+    margin-right: -250px;
     width: 250px; 
     position: fixed;
-    z-index: 999;
     top: 0;
     right: 0;
     height: 100%;
-    background: darkcyan;
+    z-index: 999;
     color:  #fff;
+    /*background: darkcyan;*/
+    transition: 0.3s;
 }
+#sidebar.active {
+    margin-right: 0px;
+}
+
 
 #content {
     position: absolute;
     max-width: 100%;
     min-height: 100%;
     background: rgba(0,0,0,0.6);
-    transition: all 0.3s;
+    transition: all 0.75s;
 }
 #content.active {
     max-width: calc(100% - 250px);
