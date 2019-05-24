@@ -68,8 +68,8 @@
 }
 .sidebar-content{
     height:55vh;
+    width: 100%;
 }
-
 
 
 #content {
@@ -93,19 +93,26 @@
     background: none;
     border: 2px solid #fff;
     color: #fff;
-    border-radius: 50%;
     transition: 0.2s;
     font-size: 24px;
+    border-radius: 12px;
+    width: 175px;
+    /*
+    border-radius: 50%;
     width: 125px;
     height: 125px;
+    */
 }
 .b1:hover{
     background: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3), rgba(255, 255, 0, 0.3));
+    border: 2px solid yellow;
+    color: yellow;
+    font-size: 32px;
+    width: 125px;
+    /*
     width: 112px;
     height: 112px;
-    border: 2px solid yellow;
-    font-size: 32px;
-    color: yellow;
+    */
 }
 
 
