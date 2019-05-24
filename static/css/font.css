@@ -1,0 +1,51 @@
+a {
+    text-decoration: none !important;
+}
+
+p {
+    color: white;
+}
+
+i {
+    font-size:42px; 
+    color:#fff;
+}
+i:hover {
+    color: yellow;
+}
+
+small {
+    font-size: 14px;
+}
+
+.nunitoFont {
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px; /*24*/
+    color: #ffffff;
+    transition: 0.1s;
+}
+
+.nunitoFontLink {
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px; /*32*/
+    color: yellow;
+    transition: 0.1s;
+}
+
+.nunitoFontLink:hover {
+    font-size: 72px;
+    color: darkcyan;
+    cursor: pointer;
+    /*background: rgba(0,0,0,0.4);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.63);*/
+    
+    -webkit-animation-name: jello;
+    animation-name: jello;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    animation-duration: 0.75s;
+}
+
+.questFont {
+    font-family: 'Questrial', sans-serif;
+}
