@@ -7,7 +7,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   //RED PARTICLES (170)
-  for(let i = 0; i < 80; i++) {
+  for(let i = 0; i < 85; i++) {
     universe.push(new Particle(
       createVector(random(0, width - 50), random(0, height - 50)), //position
       createVector(0, 0),                 //velocity
@@ -25,7 +25,7 @@ function setup() {
   }
 
   //BLUE PARTICLES (200)
-  for(let i = 0; i < 55; i++) {
+  for(let i = 0; i < 100; i++) {
     universe.push(new Particle(
       createVector(random(width/4, width * (3/4)), random(height/4, height * (3/4))), //position
       createVector(0, 0),                 //velocity
@@ -43,7 +43,7 @@ function setup() {
   }
 
   //YELLOW PARTICLES (33)
-  for(let i = 0; i < 25; i++) {
+  for(let i = 0; i < 17; i++) {
     universe.push(new Particle(
       createVector(random(width/3, width - 200), random(height/3, height - 200)), //position
       createVector(0, 0),                 //velocity
