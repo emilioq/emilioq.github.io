@@ -6,8 +6,8 @@ var friction = .85; //.80
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  //RED PARTICLES
-  for(let i = 0; i < 170; i++) {
+  //RED PARTICLES (170)
+  for(let i = 0; i < 80; i++) {
     universe.push(new Particle(
       createVector(random(0, width - 50), random(0, height - 50)), //position
       createVector(0, 0),                 //velocity
@@ -24,8 +24,8 @@ function setup() {
       ));
   }
 
-  //BLUE PARTICLES
-  for(let i = 0; i < 200; i++) {
+  //BLUE PARTICLES (200)
+  for(let i = 0; i < 55; i++) {
     universe.push(new Particle(
       createVector(random(width/4, width * (3/4)), random(height/4, height * (3/4))), //position
       createVector(0, 0),                 //velocity
@@ -42,8 +42,8 @@ function setup() {
       ));
   }
 
-  //YELLOW PARTICLES
-  for(let i = 0; i < 33; i++) {
+  //YELLOW PARTICLES (33)
+  for(let i = 0; i < 25; i++) {
     universe.push(new Particle(
       createVector(random(width/3, width - 200), random(height/3, height - 200)), //position
       createVector(0, 0),                 //velocity
