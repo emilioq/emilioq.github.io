@@ -141,7 +141,7 @@
 
 .wave{
   background: none;
-  position: relative; 
+  position: relative;
 }
 .wave::before, .wave::after{
   border-bottom: 5px solid rgb(0, 0, 0);
