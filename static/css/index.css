@@ -13,10 +13,17 @@
 }
 */
 
+.title-line {
+    width:50%; 
+    border-bottom-style: solid; 
+    border-width: 1px;
+    border-color: rgb(7, 255, 193);
+}
+
 
 #sideBarCollapse.active {
     font-size: 72px;
-    color: darkcyan;
+    color: rgb(7, 255, 193);
 }
 
 #particles{
@@ -76,13 +83,13 @@
     position: absolute;
     max-width: 100%;
     min-height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.75);
     transition: all 0.3s;
 }
 #content.active {
     /*max-width: calc(100% - 250px);*/
     /*background: rgba(0, 0, 0, 0.4);*/
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3),rgba(255, 255, 0, 0.1));
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3),rgba(193, 7, 255, 0.1));
     min-height: 40%;
     max-height: 40%;
 }
@@ -104,9 +111,9 @@
     */
 }
 .b1:hover{
-    background: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3), rgba(255, 255, 0, 0.3));
-    border: 2px solid yellow;
-    color: yellow;
+    background: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3), rgba(7, 255, 193, 0.25));
+    border: 2px solid rgb(7, 255, 193);;
+    color: rgb(7, 255, 193);;
     font-size: 32px;
     width: 125px;
     /*

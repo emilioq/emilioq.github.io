@@ -11,7 +11,7 @@ i {
     color:#fff;
 }
 i:hover {
-    color: yellow;
+    color: rgb(7, 255, 193);
 }
 
 small {
@@ -28,13 +28,13 @@ small {
 .nunitoFontLink {
     font-family: 'Nunito', sans-serif;
     font-size: 32px; /*32*/
-    color: yellow;
+    color: #ffc107;
     transition: 0.1s;
 }
 
 .nunitoFontLink:hover {
     font-size: 72px;
-    color: darkcyan;
+    color:rgb(7, 255, 193);
     cursor: pointer;
     /*background: rgba(0,0,0,0.4);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.63);*/
