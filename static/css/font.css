@@ -18,6 +18,13 @@ small {
     font-size: 14px;
 }
 
+#sideBarCollapse.active {
+    font-size: 72px;
+    color: rgb(7, 255, 193);
+    margin-top:-16px;
+}
+
+
 .nunitoFont {
     font-family: 'Nunito', sans-serif;
     font-size: 32px; /*24*/
@@ -29,13 +36,16 @@ small {
     font-family: 'Nunito', sans-serif;
     font-size: 32px; /*32*/
     color: #ffc107;
-    transition: 0.1s;
+    transition: all 0.1s;
 }
 
 .nunitoFontLink:hover {
     font-size: 72px;
     color:rgb(7, 255, 193);
     cursor: pointer;
+    margin-top:-16px;
+    /*margin-top: -40px;*/
+
     /*background: rgba(0,0,0,0.4);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.63);*/
     
