@@ -6,11 +6,11 @@ p {
     color: white;
 }
 
-i {
+.icon {
     font-size:42px; 
     color:#fff;
 }
-i:hover {
+.icon:hover {
     color: rgb(7, 255, 193);
 }
 

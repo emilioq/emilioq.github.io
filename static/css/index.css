@@ -2,17 +2,7 @@
     background: #262626;
 }
 
-/* CIRCLE LINES
-.content {
-    width: 300px;
-    height: 300px;
-    position:relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-*/
-
+ 
 .title-line {
     width:25%; 
     border-bottom-style: dashed; 
@@ -89,8 +79,8 @@
 }
 .b1:hover{
     background: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3), rgba(7, 255, 193, 0.25));
-    border: 2px solid rgb(7, 255, 193);;
-    color: rgb(7, 255, 193);;
+    border: 2px solid rgb(7, 255, 193);
+    color: rgb(7, 255, 193);
     font-size: 32px;
 }
 
@@ -103,13 +93,13 @@
     flex-direction: column;
 }
 
-.transparent {
-    z-index:-1;
-    position: absolute;
+.p5-lines{
     width: 300px;
     height: 300px;
-    background: rgba(0, 0, 0, 0.85);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2);
+    position:relative;
+    overflow: hidden;
+    background:#000;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.050);
 }
 
 .wave{

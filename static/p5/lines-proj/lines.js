@@ -1,6 +1,6 @@
 var num_lines = 15;
 var t = 0;
-var op = 15; //55
+var op = 25; //55
 var mouse = 0;
 
 function setup() {
@@ -10,11 +10,11 @@ function setup() {
 function draw() {
   clear();
   stroke(250,230,200);
-  strokeWeight(3);
+  strokeWeight(2.5);
   
   translate(windowWidth/2, windowHeight/2);
 
-  if(op > 15) {
+  if(op > 25) {
     op -= 5;
   }
 
@@ -27,8 +27,8 @@ function draw() {
     mouse=8;
     t-=.04;
   
-    if(op >= 25) {
-      op = 25;
+    if(op >= 40) {
+      op = 40;
     }
   
     if(mouse >= 125) {
