@@ -17,7 +17,7 @@ function setup() {
       [2,4],                                 //repelled to 25
       [],                                   //passive to
       [15, 35, 25, 20],                                 //minimum radius 25
-      [30, 70, 75, 60],                     //maximum radius 65
+      [80, 70, 75, 60],                     //maximum radius 65
       random(0.2,0.95),                                //dampening or friction
       random(3,9),                                  //size
       [0.9, 2, 2, 3]
@@ -34,7 +34,7 @@ function setup() {
       [1,2],                                //attracted to 13
       [3,4],                                 //repelled to 245
       [],                                   //passive to
-      [10, 13, 10, 25],                                 //minimum radius
+      [10, 13, 10, 10],                                 //minimum radius
       [70, 25, 60, 65],                                //maximum radius 50 ... 55
       random(0.2,0.95),                                 //dampening or friction
       random(3,9),                                  //size
@@ -52,8 +52,8 @@ function setup() {
       [1,2],                                //attracted to 215
       [3,4],                              //repelled to 34
       [],                                   //passive to
-      [15, 15, 30, 25],                                 //minimum radius
-      [50, 70, 90, 70],                                 //maximum radius 77
+      [10, 15, 30, 25],                                 //minimum radius
+      [60, 70, 90, 70],                                 //maximum radius 77
       random(0.2,0.95),                                //dampening or friction
       random(3,9),                                  //size
       [1.0, 0.9, 1.2, 3]
@@ -71,7 +71,7 @@ function setup() {
         [4],                              //repelled to 34
         [],                                   //passive to
         [15, 12, 10, 30],                                 //minimum radius
-        [30, 45, 50, 65],                                 //maximum radius 77
+        [30, 70, 50, 65],                                 //maximum radius 77
         random(0.2,0.95),                                //dampening or friction
         random(3,9),                                  //size
         [0.75, 0.5, 0.9, 2.6]
@@ -93,6 +93,7 @@ function draw() {
 function mousePressed() {
   let p = int(random(1,5));
   switch(p) {
+    //RED
     case 1:
       universe.push(new Particle(
         createVector(mouseX, mouseY), //position
@@ -103,12 +104,13 @@ function mousePressed() {
         [2,4],                                 //repelled to 25
         [],                                   //passive to
         [15, 35, 25, 20],                                 //minimum radius 25
-        [30, 70, 75, 60],                     //maximum radius 65
+        [80, 70, 75, 60],                     //maximum radius 65
         random(0.2,0.95),                                //dampening or friction
         random(3,9),                                  //size
         [0.9, 2, 2, 3]
       ));
       break;
+    //BLUE
     case 2:
       universe.push(new Particle(
         createVector(mouseX, mouseY), //position
@@ -118,13 +120,14 @@ function mousePressed() {
         [1,2],                                //attracted to 13
         [3,4],                                 //repelled to 245
         [],                                   //passive to
-        [10, 13, 10, 25],                                 //minimum radius
+        [10, 13, 10, 10],                                 //minimum radius
         [70, 25, 60, 65],                                //maximum radius 50
         random(0.2,0.95),                                 //dampening or friction
         random(3,9),                                  //size
         [1.9, 1, 7, 3]
       ));
       break;
+    //YELLOW
     case 3:
       universe.push(new Particle(
         createVector(mouseX, mouseY), //position
@@ -134,13 +137,14 @@ function mousePressed() {
         [1,2],                                //attracted to 215
         [3,4],                              //repelled to 34
         [],                                   //passive to
-        [15, 15, 30, 25],                                 //minimum radius
-        [50, 70, 90, 70],                                 //maximum radius 77
+        [10, 15, 30, 25],                                 //minimum radius
+        [60, 70, 90, 70],                                 //maximum radius 77
         random(0.2,0.95),                                //dampening or friction
         random(3,9),                                  //size
         [1.0, 0.9, 1.2, 3]
       ));
       break;
+    //GREEN
     case 4:
       universe.push(new Particle(
         createVector(mouseX, mouseY), //position
@@ -151,7 +155,7 @@ function mousePressed() {
         [4],                              //repelled to 34
         [],                                   //passive to
         [15, 12, 10, 30],                                 //minimum radius
-        [30, 45, 50, 65],                                 //maximum radius 77
+        [30, 70, 50, 65],                                 //maximum radius 77
         random(0.2,0.95),                                //dampening or friction
         random(3,9),                                  //size
         [0.75, 0.5, 0.9, 2.6]
