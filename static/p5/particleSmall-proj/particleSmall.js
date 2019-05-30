@@ -61,7 +61,7 @@ class Particle {
     
         for(let p of particles) {
             let d = dist(this.position.x, this.position.y, p.position.x, p.position.y);
-            let mid = ((this.maxR[p.value-1] - this.minR)/2);
+            let mid = ((this.maxR[p.value-1] - this.minR[p.value-1])/2);
 
             if(p != this && d < this.maxR[p.value-1]) {
                 newVel.mult(0);
@@ -69,20 +69,20 @@ class Particle {
                 newVel.sub(this.position);
                 //newVel.sub(p.minR);
 
-                if(d < this.minR) {
+                if(d < this.minR[p.value-1]) {
                     //newVel.mult(Math.pow(d - this.minR, 2) * -1);
-                    newVel.mult(Math.pow(d - this.minR, 2) / (this.minR * -4));
+                    newVel.mult(Math.pow(d - this.minR[p.value-1], 2) / (this.minR[p.value-1] * -4));
                     total++;
-                } else if(d <= (this.minR + mid) && this.repelled.includes(p.value)) {
+                } else if(d <= (this.minR[p.value-1] + mid) && this.repelled.includes(p.value)) {
                     newVel.mult(((this.force / mid) * d) * -1);
                     total++;
-                } else if(d <= (this.minR + mid) && this.attracted.includes(p.value)) {
+                } else if(d <= (this.minR[p.value-1] + mid) && this.attracted.includes(p.value)) {
                     newVel.mult((this.force / mid) * d);
                     total++;
-                } else if(d > (this.minR + mid) && this.repelled.includes(p.value)) {
+                } else if(d > (this.minR[p.value-1] + mid) && this.repelled.includes(p.value)) {
                     newVel.mult((this.force / mid) * (d - this.maxR[p.value-1]));
                     total++;
-                } else if(d > (this.minR + mid) && this.attracted.includes(p.value)) {
+                } else if(d > (this.minR[p.value-1] + mid) && this.attracted.includes(p.value)) {
                     newVel.mult(((this.force / mid) * (d - this.maxR[p.value-1])) * -1);
                     total++;
                 }
