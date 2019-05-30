@@ -17,7 +17,7 @@ function setup() {
       [2,4],                                 //repelled to 25
       [],                                   //passive to
       [15, 35, 25, 20],                                 //minimum radius 25
-      [30, 70, 65, 60],                     //maximum radius 65
+      [30, 70, 75, 60],                     //maximum radius 65
       random(0.2,0.95),                                //dampening or friction
       random(3,9),                                  //size
       [0.9, 2, 2, 3]
@@ -35,7 +35,7 @@ function setup() {
       [3,4],                                 //repelled to 245
       [],                                   //passive to
       [10, 13, 10, 25],                                 //minimum radius
-      [55, 25, 60, 65],                                //maximum radius 50 ... 55
+      [70, 25, 60, 65],                                //maximum radius 50 ... 55
       random(0.2,0.95),                                 //dampening or friction
       random(3,9),                                  //size
       [1.9, 1, 7, 3]
@@ -53,7 +53,7 @@ function setup() {
       [3,4],                              //repelled to 34
       [],                                   //passive to
       [15, 15, 30, 25],                                 //minimum radius
-      [77, 55, 90, 70],                                 //maximum radius 77
+      [50, 70, 90, 70],                                 //maximum radius 77
       random(0.2,0.95),                                //dampening or friction
       random(3,9),                                  //size
       [1.0, 0.9, 1.2, 3]
@@ -71,10 +71,10 @@ function setup() {
         [4],                              //repelled to 34
         [],                                   //passive to
         [15, 12, 10, 30],                                 //minimum radius
-        [50, 45, 50, 65],                                 //maximum radius 77
+        [30, 45, 50, 65],                                 //maximum radius 77
         random(0.2,0.95),                                //dampening or friction
         random(3,9),                                  //size
-        [0.5, 0.5, 0.9, 2.6]
+        [0.75, 0.5, 0.9, 2.6]
       ));
     }
 }
@@ -103,7 +103,7 @@ function mousePressed() {
         [2,4],                                 //repelled to 25
         [],                                   //passive to
         [15, 35, 25, 20],                                 //minimum radius 25
-        [30, 70, 65, 60],                     //maximum radius 65
+        [30, 70, 75, 60],                     //maximum radius 65
         random(0.2,0.95),                                //dampening or friction
         random(3,9),                                  //size
         [0.9, 2, 2, 3]
@@ -119,7 +119,7 @@ function mousePressed() {
         [3,4],                                 //repelled to 245
         [],                                   //passive to
         [10, 13, 10, 25],                                 //minimum radius
-        [55, 25, 60, 65],                                //maximum radius 50
+        [70, 25, 60, 65],                                //maximum radius 50
         random(0.2,0.95),                                 //dampening or friction
         random(3,9),                                  //size
         [1.9, 1, 7, 3]
@@ -135,7 +135,7 @@ function mousePressed() {
         [3,4],                              //repelled to 34
         [],                                   //passive to
         [15, 15, 30, 25],                                 //minimum radius
-        [77, 55, 90, 70],                                 //maximum radius 77
+        [50, 70, 90, 70],                                 //maximum radius 77
         random(0.2,0.95),                                //dampening or friction
         random(3,9),                                  //size
         [1.0, 0.9, 1.2, 3]
@@ -151,10 +151,10 @@ function mousePressed() {
         [4],                              //repelled to 34
         [],                                   //passive to
         [15, 12, 10, 30],                                 //minimum radius
-        [50, 45, 50, 65],                                 //maximum radius 77
+        [30, 45, 50, 65],                                 //maximum radius 77
         random(0.2,0.95),                                //dampening or friction
         random(3,9),                                  //size
-        [0.5, 0.5, 0.9, 2.6]
+        [0.75, 0.5, 0.9, 2.6]
       ));
       break;
         
