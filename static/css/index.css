@@ -84,6 +84,9 @@
     color: rgb(7, 255, 193);
     font-size: 32px;
 }
+.b1:focus, video:focus {
+    outline: none;
+}
 
 
 
