@@ -61,15 +61,14 @@
                         </div>
 
                         <div class="sidebar-buttons" style="display:flex; flex-direction:column;">
-                            <a href="#workSection" class="button b1 mx-auto p-2 questFont mt-3 mb-3 text-center">  Work </a>
-                            <a href="#aboutSection" class="button b1 mx-auto p-2 questFont mb-3 text-center">  About </a>
-                            <a href="#" class="button b1 mx-auto p-2 questFont mb-3 text-center">  Extra </a>
+                            <a href="#sectionWork" class="button b1 mx-auto p-2 questFont mt-3 mb-3 text-center">  Work </a>
+                            <a href="#sectionAbout" class="button b1 mx-auto p-2 questFont mb-3 text-center">  About </a>
                         </div>
                     </div>
 
                     <!--CONTENT-->
                     <div class="sidebar-content ml-5 questFont">
-                        <h1 id="workSection" class="display-3 title-line mb-5"> <i class="far fa-folder-open mr-2"></i> Work </h1>
+                        <h1 id="sectionWork" class="display-3 title-line mb-5"> <i class="far fa-folder-open mr-2"></i> Work </h1>
 
                         <!--GENERATIVE ART-->
                         <div class="row" style="margin-bottom:9rem;">
@@ -385,7 +384,7 @@
 
 
                         <!--ABOUT-->
-                        <h1 id="aboutSection"class="display-3 title-line mb-5" style="margin-top:12rem;"> <i class="far fa-address-card mr-2"></i> About </h1>
+                        <h1 id="sectionAbout"class="display-3 title-line mb-5" style="margin-top:12rem;"> <i class="far fa-address-card mr-2"></i> About </h1>
                         <div class="col-6">
 
                             <h1>Hello World!<span class="blink">_</span></h1> 
@@ -428,7 +427,7 @@
             });
 
             //SMOOTH ANCHOR SCROLL
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            document.querySelectorAll('a[href^="#section"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
 
