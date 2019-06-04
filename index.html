@@ -61,15 +61,15 @@
                         </div>
 
                         <div class="sidebar-buttons" style="display:flex; flex-direction:column;">
-                            <button class="button b1 mx-auto p-2 questFont mt-3 mb-3">  Work </button>
-                            <button class="button b1 mx-auto p-2 questFont mb-3">  About </button>
-                            <button class="button b1 mx-auto p-2 questFont"> Extra </button>
+                            <a href="#workSection" class="button b1 mx-auto p-2 questFont mt-3 mb-3 text-center">  Work </a>
+                            <a href="#aboutSection" class="button b1 mx-auto p-2 questFont mb-3 text-center">  About </a>
+                            <a href="#" class="button b1 mx-auto p-2 questFont mb-3 text-center">  Extra </a>
                         </div>
                     </div>
 
                     <!--CONTENT-->
                     <div class="sidebar-content ml-5 questFont">
-                        <h1 class="display-3 title-line mb-5"> <i class="far fa-folder-open mr-2"></i> Work </h1>
+                        <h1 id="workSection" class="display-3 title-line mb-5"> <i class="far fa-folder-open mr-2"></i> Work </h1>
 
                         <!--GENERATIVE ART-->
                         <div class="row" style="margin-bottom:9rem;">
@@ -297,6 +297,7 @@
                                     </p>
                                 </a>        
                                 <p>
+                                <small class="text-muted"> <i class="fas fa-code mr-2" style="font-size:12px;"></i>HTML/CSS<br></small>
                                 <small class="text-muted"> <i class="fas fa-code mr-2" style="font-size:12px;"></i>JavaScript<br></small>
                                 <small class="text-muted"> <i class="fas fa-layer-group mr-2" style="font-size:15px;"></i>Cocos2d</small>
                                 </p>
@@ -304,7 +305,7 @@
 
                             <div>
                                 <video width="720" controls autoplay loop muted style="border-radius:20px;">
-                                    <source src="static/mp4/#" type="video/mp4">
+                                    <source src="static/mp4/maze.mp4" type="video/mp4">
                                     Sorry, your browser does not support this video.
                                 </video>
                             </div>
@@ -384,7 +385,7 @@
 
 
                         <!--ABOUT-->
-                        <h1 class="display-3 title-line mb-5" style="margin-top:12rem;"> <i class="far fa-address-card mr-2"></i> About </h1>
+                        <h1 id="aboutSection"class="display-3 title-line mb-5" style="margin-top:12rem;"> <i class="far fa-address-card mr-2"></i> About </h1>
                         <div class="col-8">
 
                             <h1>Hello World!<span class="blink">_</span></h1> 
@@ -414,9 +415,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
         <script type="text/javascript">
+            //INTRO POP UP MAIN CONTENT
             $(document).ready(function () {
                 $('#sidebarCollapse').on('click', function () {
                     $('#intro-content, #main-content, #sideBarCollapse, #particles').toggleClass('active'); //no "#particles" faster
+                });
+            });
+
+            //SMOOTH ANCHOR SCROLL
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
         </script>
