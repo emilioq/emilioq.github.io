@@ -296,3 +296,21 @@
     -webkit-animation: none;
     animation: none;
 }
+
+/*BLINKING*/
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    opacity: 0.5;
+    color: rgb(193, 7, 255);
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
