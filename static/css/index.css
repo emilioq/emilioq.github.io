@@ -4,10 +4,13 @@
 
  
 .title-line {
-    width:25%; 
+    width:32%; 
     border-bottom-style: dashed; 
     border-width: 1px;
     border-color: rgb(7, 255, 193);
+    font-size: 4.5rem;
+    line-height: 1.2;
+    display:flex;
 }
 
 
