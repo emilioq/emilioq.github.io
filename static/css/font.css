@@ -18,13 +18,6 @@ small {
     font-size: 14px;
 }
 
-#sideBarCollapse.active {
-    font-size: 72px;
-    color: rgb(7, 255, 193);
-    margin-top:-16px;
-}
-
-
 .nunitoFont {
     font-family: 'Nunito', sans-serif;
     font-size: 32px; /*24*/
@@ -33,14 +26,14 @@ small {
     position:fixed;
 }
 
-.nunitoFontLink {
+#nunitoFontLink {
     font-family: 'Nunito', sans-serif;
     font-size: 32px; /*32*/
     color: #ffc107;
     transition: all 0.1s;
 }
 
-.nunitoFontLink:hover {
+#nunitoFontLink:hover {
     font-size: 72px;
     color:rgb(7, 255, 193);
     cursor: pointer;
@@ -51,6 +44,12 @@ small {
     -webkit-transform-origin: center;
     transform-origin: center;
     animation-duration: 0.75s;
+}
+
+#nunitoFontLink.active {
+    font-size: 72px;
+    color: rgb(7, 255, 193);
+    margin-top:-16px;
 }
 
 .questFont {

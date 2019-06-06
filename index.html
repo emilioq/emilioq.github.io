@@ -27,7 +27,7 @@
                 <div class="nunitoFont">
                     <div class="row bounceIn">
                         <div> Hi, I'm </div>
-                        <div id="sidebarCollapse" class="nunitoFontLink">&nbsp;Emilio.</div>
+                        <div id="nunitoFontLink">&nbsp;Emilio.</div>
                     </div> 
                     <div class="row bounceInDelay"> I'm a Software Developer. </div>
                 </div>
@@ -415,12 +415,23 @@
         <script type="text/javascript">
             //INTRO POP UP MAIN CONTENT
             $(document).ready(function () {
-                $('#sidebarCollapse').on('click', function () {
-                    $('#intro-content, #main-content, #sideBarCollapse, #particles').toggleClass('active'); //no "#particles" faster
+                $('#nunitoFontLink').on('click', function () {
+                    $('#intro-content, #main-content, #nunitoFontLink, #particles').toggleClass('active'); //no "#particles" faster
                 });
             });
 
-            //SMOOTH ANCHOR SCROLL
+            //INTRO SCROLL EVENT
+            document.getElementById("intro-content").addEventListener("wheel", scrollFunc);
+            function scrollFunc() {
+                if(!document.getElementById("intro-content").classList.contains('active')) {
+                    document.getElementById("intro-content").classList.toggle('active');
+                    document.getElementById("main-content").classList.toggle('active');
+                    document.getElementById("nunitoFontLink").classList.toggle('active');
+                    document.getElementById("particles").classList.toggle('active');
+                }      
+            }
+            
+            //SMOOTH ANCHOR LINK SCROLL
             document.querySelectorAll('a[href^="#section"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
