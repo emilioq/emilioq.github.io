@@ -109,6 +109,38 @@
 }
 
 
+.fadeInBot {
+    -webkit-animation: fadeInBot 2s;
+    animation: fadeInBot 2s;
+}
+@-webkit-keyframes fadeInBot {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, +10%, 0);
+      transform: translate3d(0, +10%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInBot {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, +10%, 0);
+      transform: translate3d(0, +10%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+
 
 .bounceIn {
     -webkit-animation-duration: 0.75s;
