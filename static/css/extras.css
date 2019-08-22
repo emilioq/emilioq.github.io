@@ -1,11 +1,30 @@
+.header {
+    position: fixed;
+    top: 0;
+    background:#000; 
+    width: 100vw;
+}
+
 .footer {
-    background: #262626;
+    position: fixed;
+    bottom: 0;
+    background:#000; 
+    margin-top: 9rem;
+    width: 100vw;
 }
 
 .extras-title {
     font-family: 'Libre Barcode 39 Text', cursive;
     font-size: 64px;
     color: white;
+}
+
+#option1 {
+    text-align: right;
+}
+
+#option1, #option2 {
+    width: 50%;
 }
 
 
@@ -18,13 +37,16 @@
     -webkit-animation: none;
     animation: none;
     transition: 0.3s;
+    text-align: left;
 }
 #img1 {
-    width:420px;
+    /*width:420px;*/
+    width:80%;
     transition: 0.5s;
 }
 #option1:hover > #img1{
-    width:500px;
+    /*width:500px;*/
+    width:100%;
 }
 #option1:hover > .extras-header1{
     opacity:100;
@@ -44,11 +66,14 @@
     transition: 0.3s;
 }
 #img2 {
-    width:420px;
+    /*width:420px;*/
+    width:80%;
     transition: 0.5s;
+    opacity: 50;
 }
 #option2:hover > #img2{
-    width:500px;
+    /*width:500px;*/
+    width:100%;
 }
 #option2:hover >  .extras-header2 {
     opacity:100;
@@ -60,6 +85,8 @@
 .container {
     display: flex;
     justify-content: center;
+    width: 100vw;
+    height: 50vh;
 }
 
 /*
@@ -70,3 +97,10 @@
     height: 50vh;
 }
 */
+
+.vertical-center {
+    min-height: 100%;  
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
