@@ -44,7 +44,7 @@
     width:80%;
     transition: 0.5s;
 }
-#option1:hover > #img1{
+#option1:hover #img1{
     /*width:500px;*/
     width:100%;
 }
@@ -71,11 +71,11 @@
     transition: 0.5s;
     opacity: 50;
 }
-#option2:hover > #img2{
+#option2:hover #img2{
     /*width:500px;*/
     width:100%;
 }
-#option2:hover >  .extras-header2 {
+#option2:hover > .extras-header2 {
     opacity:100;
     -webkit-animation: fadeInBot 1s;
     animation: fadeInBot 1s;
