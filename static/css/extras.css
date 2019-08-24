@@ -13,6 +13,13 @@
     width: 100vw;
 }
 
+#sidebar {
+    width: 175px;
+    position: -webkit-sticky;
+    position: sticky;
+    /*top: 3rem;*/
+}
+
 .extras-title {
     font-family: 'Libre Barcode 39 Text', cursive;
     font-size: 64px;
