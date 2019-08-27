@@ -72,12 +72,14 @@
 }
 #img1 {
     /*width:420px;*/
-    width:80%;
+    /*width:80%;*/
+    width: 21vw;
     transition: 0.5s;
 }
 #option1:hover #img1{
     /*width:500px;*/
-    width:100%;
+    /*width:100%;*/
+    width: 26vw;
 }
 #option1:hover > .extras-header1{
     opacity:100;
@@ -98,13 +100,15 @@
 }
 #img2 {
     /*width:420px;*/
-    width:80%;
+    /*width:80%;*/
     transition: 0.5s;
-    opacity: 50;
+    width: 21vw;
+    
 }
 #option2:hover #img2{
     /*width:500px;*/
-    width:100%;
+    /*width:100%;*/
+    width: 26vw;
 }
 #option2:hover > .extras-header2 {
     opacity:100;

@@ -15,6 +15,7 @@ let _text;
 let anonFont;
 
 let song1, song2, song3, song4, song5, song6, song7, song8;
+let isPlaying;
 
 let gl;
 
@@ -145,30 +146,29 @@ class Cover {
     this.c.textFont(anonFont);
     this.c.textAlign(CENTER);
     this.c.textSize(this.size/10);
-    this.c.fill(255);
-    this.c.background(0);
-    this.c.text(this.text, this.size/2, this.size/2);
   }
 
   display() {
     push();
+    if (
+      mouseX < this.x + this.size/2 + window.innerWidth/2 &&
+      mouseX > this.x - this.size/2  + window.innerWidth/2 &&
+      mouseY < this.y + this.size/2 + window.innerHeight/2 &&
+      mouseY > this.y - this.size/2  + window.innerHeight/2 
+    ) {
+      this.c.background(255);
+      this.c.fill(0);
+      this.c.text(this.text, this.size/2, this.size/2);
+    } else {
+      this.c.background(0);
+      this.c.fill(255);
+      this.c.text(this.text, this.size/2, this.size/2);
+    }
     translate(this.x, this.y)
     rotateY(map(mouseX, 0+this.x, width+this.x, -1, 1));
     rotateX(map(mouseY, 0+this.y, height+this.y, 1, -1));
     texture(this.c);
     box(this.size, this.size, 1);
-
-    /*
-    if (
-      mouseX > this.x - this.size/2 &&
-      mouseX < this.x + this.size/2 &&
-      mouseY > this.y - this.size/2 &&
-      mouseY < this.y + this.size/2
-    ) {
-      this.c.background(100);
-    } else {
-      this.c.background(0);
-    }*/
     pop();
   }
 
