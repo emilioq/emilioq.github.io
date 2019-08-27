@@ -32,17 +32,17 @@ function setup() {
 
   //gl = canvas.getContext(WEBGL);
 
-  song1 = new Cover("u_n_me.mp3", -3 * window.innerWidth/16, -window.innerHeight/8, 200);
-  song2 = new Cover("trouble.mp3", -3 * window.innerWidth/16, window.innerHeight/8, 200);
+  song1 = new Cover("u_n_me.mp3", -3 * window.innerWidth/16, -window.innerHeight/8, window.innerWidth/10);
+  song2 = new Cover("trouble.mp3", -3 * window.innerWidth/16, window.innerHeight/8, window.innerWidth/10);
 
-  song3 = new Cover("shadow.mp3", -window.innerWidth/16, -window.innerHeight/8, 200);
-  song4 = new Cover("ma_boy_remix.mp3", -window.innerWidth/16, window.innerHeight/8, 200);
+  song3 = new Cover("shadow.mp3", -window.innerWidth/16, -window.innerHeight/8, window.innerWidth/10);
+  song4 = new Cover("ma_boy_remix.mp3", -window.innerWidth/16, window.innerHeight/8, window.innerWidth/10);
 
-  song5 = new Cover("im_ok.mp3", window.innerWidth/16, -window.innerHeight/8, 200);
-  song6 = new Cover("it_hurts.mp3", window.innerWidth/16, window.innerHeight/8, 200);
+  song5 = new Cover("im_ok.mp3", window.innerWidth/16, -window.innerHeight/8, window.innerWidth/10);
+  song6 = new Cover("it_hurts.mp3", window.innerWidth/16, window.innerHeight/8, window.innerWidth/10);
 
-  song7 = new Cover("dj_mix.mp3", 3 * window.innerWidth/16, -window.innerHeight/8, 200);
-  song8 = new Cover("wisteria.mp3", 3 * window.innerWidth/16, window.innerHeight/8, 200);
+  song7 = new Cover("dj_mix.mp3", 3 * window.innerWidth/16, -window.innerHeight/8, window.innerWidth/10);
+  song8 = new Cover("wisteria.mp3", 3 * window.innerWidth/16, window.innerHeight/8, window.innerWidth/10);
 
 
 
