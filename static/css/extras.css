@@ -161,3 +161,6 @@ video:focus {
     font-family: 'anonFont';
     margin-bottom: 16rem;
 }
+video {
+    height: 50vh;
+}
