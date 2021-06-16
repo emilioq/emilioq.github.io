@@ -130,29 +130,29 @@ class Particle {
         strokeWeight(this.size);
         switch(this.value) {
             case 1:
-                stroke(200, 0, 120);
+                stroke(255, 255, 255);
                 //stroke(228, 0, 172);
                 //stroke(193, 7, 255);
                 //stroke(150, 70, 70);    //RED
                 break;
             case 2:
-                stroke(0, 200, 120);
+                stroke(255, 255, 255);
                 //stroke(0, 228, 172);
                 //stroke(7, 255, 193);
                 //stroke(70, 70, 150);    //BLUE
                 break;
             case 3:
-                stroke(200, 120, 0);
+                stroke(255, 255, 255);
                 //stroke(228, 172, 0);
                 //stroke(255, 193, 7);
                 //stroke(175, 150, 0);    //YELLOW
                 break;
 
             case 4:
-                stroke(70, 150, 70);    //GREEN
+                stroke(255, 255, 255);    //GREEN
                 break;
             case 5:
-                stroke(229, 188, 229);  //PINK
+                stroke(255, 255, 255);  //PINK
                 break;
             default:
                 stroke(255, 0, 0);

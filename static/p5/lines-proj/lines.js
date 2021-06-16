@@ -9,6 +9,7 @@ function setup() {
 
 function draw() {
   clear();
+  background(255,255,255)
   stroke(250,230,200);
   strokeWeight(2.5);
   
@@ -39,13 +40,13 @@ function draw() {
   
   for(let i = 0; i < num_lines; i++) {
     //BLUE
-    stroke(250 - (i * 10), 230, 200, op);
+    stroke(148 - (i * 10), 215, 255, op);
     line(x1(t+i) + mouseY, y1(t+i) - mouse, x2(t+i), y2(t+i) + mouseY);
     //PURPLE
-    stroke(250, 230 - (i * 5), 200, op);
+    stroke(255, 138 - (i * 5), 130, op);
     line(x2(t+i) - mouseY, y1(t-i) + mouse, x1(t+i) + mouseX, y2(t-i)  + mouse);
     //YELLOW
-    stroke(250, 230, 200 - (i * 15), op);
+    stroke(153, 255, 153 - (i * 15), op);
     line(x2(t-i) + mouse, x1(t-i) + mouseX, y1(t-i) + mouseY, y2(t+i)  + mouse);
   }
   t += 0.05; //.25

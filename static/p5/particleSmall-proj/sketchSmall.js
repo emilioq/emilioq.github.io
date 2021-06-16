@@ -80,7 +80,7 @@ function setup() {
 }
 
 function draw() {
-  background(15);
+  background(255);
   for(let p of universe) {
 
     p.applyForce(universe);

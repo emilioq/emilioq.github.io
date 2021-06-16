@@ -7,7 +7,7 @@
     width:32%; 
     border-bottom-style: dashed; 
     border-width: 1px;
-    border-color: rgb(7, 255, 193);
+    border-color: rgb(110, 110, 110);
     font-size: 4.5rem;
     line-height: 1.2;
     display:flex;
@@ -17,49 +17,40 @@
 
 #particles{
     width: 100%; 
-    height:100%;
+    height: 100%;
     position: absolute;
     transition: all 0.3s;
     overflow: hidden;
 }
-#particles.active {
-    height: 40%;
-}
-
 
 
 #intro-content {
+    
     position: absolute;
     max-width: 100%;
-    min-height: 100%;
     background: rgba(0,0,0,0.7);
     transition: all 0.3s;
-}
-#intro-content.active {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3),rgba(193, 7, 255, 0.1));
-    min-height: 40%;
-    max-height: 40%;
+    /*background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3),rgba(193, 7, 255, 0.1));*/
+    min-height: 100%;
+    max-height: 100%;
+    
 }
 
 
 
 #main-content{
-    margin-top: 100vh;
+    /*margin-top: 100%;*/
     width: 100%;
     height: 100%;
-    top: 40%;
+    top: 100%;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     z-index: 999;
-    color:  #fff;
-    background: rgb(0,0,0);
+    color:  rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     transition: all 0.3s;
 }
-#main-content.active {
-    position: absolute;
-    height: 100%;
-    margin-top: 0px;
-}
+
 #sidebar {
     width: 175px;
     position: -webkit-sticky;
@@ -74,15 +65,15 @@
 
 .b1{
     background: none;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     transition: 0.2s;
     font-size: 24px;
     border-radius: 12px;
     width: 175px;
 }
 .b1:hover{
-    background: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3), rgba(7, 255, 193, 0.25));
+    /*background: radial-gradient(rgba(255, 255, 255, 0.5),rgba(228, 228, 228, 0.3), rgba(7, 255, 193, 0.25));*/
     border: 2px solid rgb(7, 255, 193);
     color: rgb(7, 255, 193);
     font-size: 32px;
@@ -114,7 +105,7 @@
   position: relative;
 }
 .wave::before, .wave::after{
-  border-bottom: 5px solid rgb(0, 0, 0);
+  border-bottom: 5px solid rgb(255, 255, 255);
 }
 .wave::before{
   content: "";
@@ -124,7 +115,7 @@
   bottom: 0;
   height: 10px;
   background-size: 20px 40px;
-  background-image: radial-gradient(circle at 10px -15px, transparent 20px, rgb(0, 0, 0) 21px);
+  background-image: radial-gradient(circle at 10px -15px, transparent 20px, rgb(255, 255, 255) 21px);
 }
 .wave::after{
   content: "";
@@ -134,7 +125,7 @@
   bottom: 0;
   height: 15px;
   background-size: 40px 40px;
-  background-image: radial-gradient(circle at 10px 26px, rgb(0, 0, 0) 20px, transparent 21px);
+  background-image: radial-gradient(circle at 10px 26px, rgb(255, 255, 255) 20px, transparent 21px);
 }
 
 
@@ -155,6 +146,7 @@
     opacity:0;
     transition:0.3s;
 }
+
 
 
 

@@ -1,14 +1,19 @@
+@font-face {
+    font-family: MarkWebPro;
+    src: url('../fonts/markpro/markpro-bold-webfont.woff');
+}
+
 a {
     text-decoration: none !important;
 }
 
 p {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .icon {
     font-size:42px; 
-    color:#fff;
+    color:rgb(0, 0, 0);
 }
 .icon:hover {
     color: rgb(7, 255, 193);
@@ -18,40 +23,36 @@ small {
     font-size: 14px;
 }
 
-.nunitoFont {
-    font-family: 'Nunito', sans-serif;
-    font-size: 32px; /*24*/
+.MarkWebPro {
+    font-family: 'MarkWebPro'; 
+    /*font-size: 32px; */
     color: #ffffff;
     transition: 0.1s;
     position:fixed;
 }
 
-#nunitoFontLink {
-    font-family: 'Nunito', sans-serif;
-    font-size: 32px; /*32*/
-    color: #ffc107;
-    transition: all 0.1s;
+h1, h2, h3 {
+    font-family: 'MarkWebPro' !important;
+    hyphens: manual !important;
+    margin: 0 0 0 0 !important;
+
 }
 
-#nunitoFontLink:hover {
-    font-size: 72px;
-    color:rgb(7, 255, 193);
-    cursor: pointer;
-    margin-top:-16px;
-    
-    -webkit-animation-name: jello;
-    animation-name: jello;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    animation-duration: 0.75s;
+
+
+
+h2 {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 88px;
+    letter-spacing: -.03em;
+    line-height: 1.25em;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
 }
 
-#nunitoFontLink.active {
-    font-size: 72px;
-    color: rgb(7, 255, 193);
-    margin-top:-16px;
-}
 
 .questFont {
     font-family: 'Questrial', sans-serif;
+    color: #000000;
 }
